@@ -2,6 +2,30 @@
 //Console is part of the web browser and allows you to log in messages, run js code and see errors and warnings
 console.log("Hello World!");
 
+
+//variable declaration//
+//Unlike the var keyword, which defines a variable globally, or locally to an entire function regardless of block scope,
+//let allows you to declare variables that are limited in scope to the block, statement, or expression in which they are used.
+//let is not subject to Variable Hoisting, which means that let declarations do not move to the top of the current execution context.
+function varTest() {
+  var x = 1;
+  if (true) {
+    var x = 2;  // same variable
+    console.log(x);  // 2
+  }
+  console.log(x);  // 2
+}
+
+function letTest() {
+  let x = 1;
+  if (true) {
+    let x = 2;  // different variable
+    console.log(x);  // 2
+  }
+  console.log(x);  // 1
+}
+
+
 //Operators and strings 
 //====Mathematical operators======//
 let x = 8;

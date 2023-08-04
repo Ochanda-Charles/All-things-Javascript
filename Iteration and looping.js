@@ -108,3 +108,22 @@ switch(color) {
     console.log("Color not found.");
 }
 
+//let is not subject to Variable Hoisting, 
+//which means that let declarations do not move to the top of the current execution context.
+
+
+
+//===for....in==//
+//The for...in loop is intended for iterating over the enumerable keys of an object
+let obj = {a: 1, b: 2, c: 3};
+for (let v in obj) {
+  console.log(v);//a,b,c
+}
+
+//===for....of===//
+//ES6 introduces the new for...of loop, which creates a loop iterating over iterable objects.
+let list = ["x", "y", "z"];
+for (let val of list) {
+  console.log(val);//x,y,z
+}
+
