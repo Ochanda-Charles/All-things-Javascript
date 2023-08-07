@@ -28,4 +28,16 @@ const add = (x, y) => {
   }
 
 
+  //functions also have another syntax 
+  var multiply  =  function (x,y ){
+    let product  = x*y;
+    console.log(product);
+  }
+
+
+  //the way you choose to have your function depends on your aim
+  //if you aim to have cleaner code you can go with the second format or the third one 
+  //However in the memory execution phase the Java script engine handles the second and third format as variables so they are given the undefined value
+
+
 
