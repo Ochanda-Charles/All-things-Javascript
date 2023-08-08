@@ -126,4 +126,7 @@ let list = ["x", "y", "z"];
 for (let val of list) {
   console.log(val);//x,y,z
 }
-
+ //The for...in loop should NOT be used to iterate over arrays because,
+ // depending on the JavaScript engine, it could iterate in an arbitrary order. 
+ //Also, the iterating variable is a string, not a number, 
+ //so if you try to do any math with the variable, you'll be performing string concatenation instead of addition.

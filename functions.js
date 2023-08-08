@@ -29,7 +29,7 @@ const add = (x, y) => {
 
 
   //functions also have another syntax 
-  var multiply  =  function (x,y ){
+  const multiply  =  function (x,y ){
     let product  = x*y;
     console.log(product);
   }
@@ -40,4 +40,17 @@ const add = (x, y) => {
   //However in the memory execution phase the Java script engine handles the second and third format as variables so they are given the undefined value
 
 
+//In ES6, we can put the default values right in the signature of the functions.
+function test(a, b = 3, c = 42) {
+  return a + b + c;
+}
+console.log(test(5)); //50
 
+//Arrow function with default values 
+const test = (a, b = 3, c = 42) => {
+  return a + b + c;
+}
+console.log(test(5)); //50 (5+3+42)
+
+//Default value expressions are evaluated at function call time from left to right. 
+//This also means that default expressions can use the values of previously-filled parameters.
