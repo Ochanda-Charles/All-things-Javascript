@@ -1,0 +1,4 @@
+//map
+//indexOf
+//concat
+//filter
