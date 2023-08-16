@@ -30,4 +30,15 @@ var oraimoProducts  = [`Smart Mouse`, `Vacuum dry`,`Mechanical keyboard`, ...ora
 //You can concatenate or append an array depends on the position you put the spread operator
 
 //condense multiple elements into an array
+function sum(...numbers) {
+    return numbers.reduce((total, num) => total + num, 0);
+  }
+  
+  // An array of numbers
+  const numbersArray = [1, 2, 3, 4, 5];
+  
+  // Using the spread operator to apply the array elements as arguments to the function
+  const result = sum(...numbersArray);
+  
+  console.log(result); // Output: 15
 //here we can now say we have used the rest operator as we need the array as a whole not its elements rather 

@@ -2,3 +2,5 @@
 //indexOf
 //concat
 //filter
+//set
+//reduce
