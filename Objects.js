@@ -1,27 +1,30 @@
 //An object is a collection of properties
 //An object stores its values in term of Key:value pairs
-//there are two ways of initialising an object:
-//Objects literal(most common way)
+//It can store data (strings, numbers, booleans),functionality (functions) or even a computed value.
+//there are two ways of initialising an object: object literal and constructor function/class
 
-let registration = "regNO"
-var no = "KAY 307A"
+//======Objects literal(most common way)======//
 
+// let registration = "regNO"
+// var no = "KAY 307A"
 const car = {
-    model: "Lamborghini",
-    year: 2017,
-    make : "Urus",
-    Type : "SUV",
-//You can also define methods is objects 
-   fullname(model, make) {
-    this.model = model
-    this.make = make 
-    return model + make;
-   },
-//You can also use computed property names as long as you enclose them in square brackets as follows
-   [`Car_${registration}`] : `${no}`
+  make: "Lamborghini", //key-->make , value-->Lamborghini
+  model: "Urus",
+  year: 2017,
+  type: "SUV",
+  // Adding a method (function inside an object)
+  getFullName() {
+    return this.make + " " + this.model;
+  },
+  // Computed property (dynamic key using square brackets)
+  ["Car_regNO"]: "KAY 307A"
 };
-//Using a constructor function or class
-//Used when you want to create many objects with similar properties 
+console.log(car.getFullName()); // Lamborghini Urus
+console.log(car["Car_regNO"]);  // KAY 307A
+
+//========Using a constructor function or class======//
+//Used when you want to create many objects with similar properties
+//In this case we want a person object, so we can have many people(objects) with different surnames and ages.
 //Constructor function
 function person(surname , age){
     this.surname = surname ;
@@ -31,7 +34,7 @@ function person(surname , age){
 const charles  = new person("Charles", 16); 
 
 
-//constructor class 
+//====Constructor class====//
 class Animal{
     constructor(name, species , age){
     this.name  = name ; 

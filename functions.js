@@ -29,7 +29,7 @@ const add = (x, y) => {
 
 
   //functions also have another syntax 
-  const multiply  =  function (x,y ){
+  const multiply  =  function (x,y){
     let product  = x*y;
     console.log(product);
   }

@@ -31,6 +31,33 @@ var myPlant = function(name,colour) {
 const desertPlant= new myPlant("Cactus", "green")
 
 //You can also leave the class unnamed in which the variable will simply be assigned the class definitions
+var Square = class {
+    constructor(height, width) {
+        this.height = height;
+        this.width = width;
+  }
+};
+
+const square = new Square(5, 5);
+const poster = new Square(2, 3); 
+
+
+//You can also opt to define your class this way
+var Square = class Rectangle {
+    constructor(height, width) {
+        this.height = height;
+        this.width = width;
+  }
+};
+
+const square1 = new Square(5, 5);
+const poster1 = new Square(2, 3); 
+
+
+
+//It is important to note that a class cannot be hoisted it instead brings a reference error
+
+
 
 
 
